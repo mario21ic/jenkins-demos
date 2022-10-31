@@ -24,7 +24,7 @@ pipeline {
         
         stage('approve') {
             when {
-                branch 'master'
+                branch 'main'
             }
             agent none
             steps {
@@ -38,7 +38,7 @@ pipeline {
         
         stage('deploy') {
             when {
-                branch 'master'
+                branch 'main'
             }
             steps {
                 sh "echo deploy"
